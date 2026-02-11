@@ -1,5 +1,7 @@
+/* Importazione del font Geist da Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 
+/* Reset universale: rimuove margini/padding di default e imposta il box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -10,17 +12,125 @@ body {
     font-family: "Geist", sans-serif;
 }
 
-.container-header {
-    background-image: url(../img/header_bg.webp);
+/*TIPOGRAFIA*/
+.display {
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 85%;
+    letter-spacing: -2%;
+}
+h1 {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 95%;
+    letter-spacing: -6%;
+}
+h2 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 98%;
+    letter-spacing: 0%;
+}
+h3 {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: -3%;
+}
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+    letter-spacing: -2%;
+}
+label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -2%;
+}
+link {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 95%;
+    letter-spacing: -3%;
+}
+
+@media (min-width: 768px) {
+    .display {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 95%;
+        letter-spacing: -3%;
+    }
+    h1 {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 95%;
+        letter-spacing: -3%;
+    }
+    h2 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 109%;
+        letter-spacing: 0%;
+    }
+    h3 {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 100%;
+        letter-spacing: -3%;
+    }
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 135%;
+        letter-spacing: -2%;
+    }
+    label {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+    }
+    button {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: -2%;
+    }
+    link {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 95%;
+        letter-spacing: -3%;
+    }
+}
+
+/* Hero section: sfondo con overlay scuro per migliorare la leggibilità del testo */
+.hero {
+    background-image:
+        linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)),
+        url(../img/header_bg.webp);
     width: 100%;
-    height: 100vh;
+    height: 800px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
-    padding: 20px 36px 20px 36px;
+    padding: 20px 36px;
+    justify-items: center;
 }
 
+/* Barra di navigazione: posizionata in modo "sticky" per rimanere visibile allo scroll */
 .header {
     background-color: #fff550;
     width: 100%;
@@ -32,6 +142,7 @@ body {
     top: 20px;
     z-index: 1000;
 }
+
 .contenuto-header {
     width: 100%;
     display: flex;
@@ -43,6 +154,7 @@ body {
     display: inline-block;
 }
 
+/* Stile globale per i link della navigazione */
 a {
     color: #222333;
     text-decoration: none;
@@ -52,9 +164,10 @@ a {
     font-weight: 600;
 }
 
+/* Media Query: Tablet e Smartphone (sotto i 1024px) */
 @media (max-width: 1023px) {
     .desktop-menu {
-        display: none;
+        display: none; /* Nasconde il menu esteso */
     }
     .container-menu {
         display: flex;
@@ -63,9 +176,10 @@ a {
     }
 }
 
+/* Media Query: Desktop (sopra i 1024px) */
 @media (min-width: 1024px) {
     .hamburger-menu {
-        display: none;
+        display: none; /* Nasconde l'icona menu mobile */
     }
     .container-menu {
         flex-grow: 1;
@@ -81,27 +195,77 @@ a {
     }
 }
 
-.container-titolo {
+/* Sezione titolo principale: posizionata dinamicamente rispetto alla viewport */
+.container-titolo-hero {
     position: relative;
     top: 25vh;
+    width: 80vw;
 }
 
-h1 {
+.display {
     color: white;
-    font-size: 48px;
-    letter-spacing: -2%;
-    line-height: 85%;
-    font-weight: 600;
 }
 
+/* Contenitore per i testi secondari sotto il titolo */
+.container-testo-hero {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 36px;
+}
+
+.testo1 {
+    color: white;
+}
+
+.testo2 {
+    position: relative;
+    top: 12px;
+    color: white;
+}
+
+/* Responsive: Aumento dimensioni font e gestione spazi per Tablet/Desktop */
 @media (min-width: 768px) {
-    h1 {
+    .container-titolo-hero h1 {
         font-size: 72px;
     }
+    .testo2 {
+        top: 24px;
+        width: 53%; /* Riduce la larghezza per una migliore leggibilità */
+    }
 }
 
+/* Responsive: Ottimizzazione finale per Desktop */
 @media (min-width: 1024px) {
-    h1 {
+    .container-titolo-hero h1 {
         font-size: 104px;
     }
+
+    .container-testo-hero {
+        flex-direction: row; /* Dispone testo1 e testo2 affiancati */
+    }
+
+    .testo1 {
+        padding-right: 106px;
+    }
+
+    .testo2 {
+        top: 0px; /* Allineamento corretto quando in riga */
+    }
+}
+
+.editorial-intro {
+    width: 100%;
+    height: 607px;
+    align-items: center;
+    padding: 60px 124px;
+    justify-items: center;
+}
+
+.pre-titolo {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
 }
