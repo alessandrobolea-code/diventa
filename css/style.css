@@ -37,6 +37,13 @@ h3 {
     line-height: 100%;
     letter-spacing: -0.03em;
 }
+
+h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+}
 p {
     font-weight: 400;
     font-size: 16px;
@@ -164,8 +171,7 @@ button {
 /* Hero section: sfondo con overlay scuro per migliorare la leggibilità del testo */
 .hero {
     background-image:
-        linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)),
-        url(../img/header_bg.webp);
+        linear-gradient(#0000004d, #0000004d), url(../img/header_bg.webp);
     width: 100%;
     height: 800px;
     background-size: 100% 100%;
@@ -248,7 +254,7 @@ a {
 /* Sezione titolo principale: allineata dal basso */
 .container-titolo-hero {
     width: 80vw;
-    max-width: 1440px;
+    max-width: 1228px;
 }
 
 .display {
@@ -314,7 +320,9 @@ a {
 /* ==================== EDITORIAL INTRO ==================== */
 .editorial-intro {
     width: 100%;
+    max-width: 1228px;
     padding: 60px 24px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -338,9 +346,9 @@ a {
     background-color: #fff550;
     width: 189px;
     color: #222333;
-    padding: 24px 10px;
+    padding: 13px 24px;
     border: none;
-    border-radius: 40px;
+    border-radius: 24px;
     cursor: pointer;
     font-weight: 400;
     margin-top: 24px;
@@ -391,7 +399,15 @@ a {
 .strategia {
     width: 100%;
     background-color: #fff550;
-    padding: 60px 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.strategia-content {
+    width: 100%;
+    max-width: 1276px;
+    margin: 60px auto;
+    padding: 0 24px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -426,9 +442,11 @@ a {
 }
 
 .strategia-cards {
+    width: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    overflow: hidden;
 }
 
 .card {
@@ -436,7 +454,9 @@ a {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    min-height: 400px;
+    height: 271px;
+    overflow: hidden;
+    min-width: 0;
 }
 
 .card-dark {
@@ -459,13 +479,16 @@ a {
 
 .card-image {
     margin-top: auto;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    flex: 1 1 0;
+    min-height: 0;
+    object-fit: contain;
 }
 
 @media (min-width: 768px) {
-    .strategia {
-        padding: 80px 48px;
+    .strategia-content {
+        padding: 0 48px;
+        margin: 80px auto;
         gap: 40px;
     }
 
@@ -475,16 +498,15 @@ a {
         font-weight: 400;
         margin-bottom: 8px;
     }
-
-    .strategia-cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
+    .card {
+        height: 461px;
     }
 }
 
 @media (min-width: 1024px) {
-    .strategia {
-        padding: 100px 124px;
+    .strategia-content {
+        padding: 0 24px;
+        margin: 100px auto;
         gap: 48px;
     }
     .strategia-header {
@@ -495,16 +517,23 @@ a {
     .bottone-servizi {
         align-self: flex-end;
     }
-
+    .card {
+        height: 410px;
+    }
     .strategia-header h2 {
         max-width: 60%;
+    }
+    .strategia-cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
     }
 }
 
 /* ==================== PARTNER ==================== */
 .partner {
     width: 100%;
-    padding: 40px 24px;
+    padding: 96px 24px;
+    background-color: #fffff2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -512,35 +541,30 @@ a {
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
 }
+
+.partner-loghi {
+    width: 100%;
+    max-width: 1276px;
+    display: flex;
+    justify-content: space-around;
+}
 .partner-loghi {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 32px;
-}
-
-@media (min-width: 768px) {
-    .partner {
-        padding: 48px;
-        flex-direction: row;
-        justify-content: center;
-        gap: 48px;
-    }
-    .partner-loghi {
-        gap: 48px;
-    }
-}
-@media (min-width: 1024px) {
-    .partner {
-        padding: 48px 124px;
-    }
 }
 
 /* ==================== CTA CASE STUDIES ==================== */
 .cta-case-studies {
     width: 100%;
-    background-color: #fff550;
+    height: 540px;
+    background-image:
+        linear-gradient(#00000059, #00000059), url(../img/insight.webp);
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 60px 24px;
     display: flex;
     flex-direction: column;
@@ -550,8 +574,14 @@ a {
     position: relative;
 }
 .cta-contenuto {
+    width: 100%;
+    max-width: 1228px;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    text-align: center;
     gap: 24px;
     z-index: 1;
 }
@@ -614,7 +644,6 @@ a {
 }
 .footer-logo img {
     height: 32px;
-    filter: brightness(0) invert(1);
 }
 .footer-nav {
     display: flex;
