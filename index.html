@@ -7,13 +7,13 @@
         <title>Diventa</title>
     </head>
     <body>
-        <div class="container-header">
+        <div class="header-wrapper">
             <header class="header">
-                <div class="contenuto-header">
-                    <div class="container-logo">
+                <div class="header__content">
+                    <div class="header__logo">
                         <img src="./img/Logo.svg" />
                     </div>
-                    <div class="container-menu">
+                    <div class="header__menu">
                         <nav>
                             <a class="desktop-menu" href="index.html">Home</a>
                             <a class="desktop-menu" href="#"
@@ -34,11 +34,11 @@
         </div>
 
         <section class="hero">
-            <div class="container-titolo-hero">
+            <div class="hero__title-wrapper">
                 <h1 class="display">Diventa ciò che vuoi trasformare.</h1>
 
-                <div class="container-testo-hero">
-                    <div class="testo1">
+                <div class="hero__text">
+                    <div class="hero__subtitle">
                         <h3>
                             Dalla strategia alla comunicazione, dal
                             comportamento al digitale: accompagniamo imprese e
@@ -46,7 +46,7 @@
                         </h3>
                     </div>
 
-                    <div class="testo2">
+                    <div class="hero__description">
                         <p>
                             Da oltre cinque anni costruiamo strategie, strumenti
                             e percorsi che rendono la trasformazione reale,
@@ -56,25 +56,26 @@
                 </div>
             </div>
         </section>
+
         <!-- Editorial Intro -->
-        <section class="editorial-intro">
-            <label class="pre-titolo">
+        <section class="container editorial-intro">
+            <label class="eyebrow">
                 Dove comportamento, strategia e design si incontrano.
             </label>
             <h1>Diventare è un processo di evoluzione consapevole.</h1>
-            <div class="container-testo-editorial-intro">
-                <p class="testo1">
+            <div class="editorial-intro__body">
+                <p class="editorial-intro__lead">
                     Diventa è una società di consulenza che integra strategia,
                     behavioural science e design della comunicazione per
                     accompagnare organizzazioni pubbliche e private nei loro
                     percorsi di trasformazione.<br />Aiutiamo imprese, enti e
-                    persone a tradurre l’innovazione in un processo concreto,
-                    misurabile e condiviso.<br />Crediamo che l’innovazione non
+                    persone a tradurre l'innovazione in un processo concreto,
+                    misurabile e condiviso.<br />Crediamo che l'innovazione non
                     nasca solo dalla tecnologia, ma dalla capacità di evolvere
                     come sistema umano.<br />Unendo rigore analitico, creatività
                     e scienze
                 </p>
-                <p class="testo2">
+                <p class="editorial-intro__detail">
                     comportamentali, aiutiamo le organizzazioni a comprendere i
                     bisogni, migliorare i contesti decisionali e costruire
                     relazioni più efficaci tra persone, istituzioni e
@@ -87,26 +88,30 @@
                     divenire che mette le persone al centro delle decisioni.
                 </p>
             </div>
-            <button>Prenota una consulenza</button>
+            <button class="btn btn--primary">Prenota una consulenza</button>
         </section>
+
         <!--immagine divisoria-->
-        <img class="immagine-ape" src="./img/Media_divided_Section.webp" />
-        <!-- Strategia -->
-        <section class="strategia">
-            <div class="strategia-content">
-                <div class="strategia-header">
+        <img class="divider-image" src="./img/Media_divided_Section.webp" />
+
+        <!-- Strategy -->
+        <section class="strategy">
+            <div class="strategy__content">
+                <div class="strategy__header">
                     <h1>Dove la strategia incontra l'evoluzione.</h1>
-                    <div class="bottone-servizi">
-                        <button>Scopri i nostri servizi</button>
+                    <div class="strategy__cta">
+                        <button class="btn btn--light">
+                            Scopri i nostri servizi
+                        </button>
                     </div>
                 </div>
-                <h3 class="strategia-descrizione">
+                <h3 class="strategy__description">
                     Accompagniamo aziende, enti e istituzioni lungo l'intero
                     ciclo della trasformazione: dalla definizione strategica
                     alla gestione dei comportamenti, dalla formazione alla
                     digitalizzazione dei processi.
                 </h3>
-                <div class="strategia-cards">
+                <div class="strategy__cards">
                     <div class="card card-dark">
                         <label>STRATEGY & TRANSFORMATION</label>
                         <h4>
@@ -142,8 +147,8 @@
 
         <!-- Partner -->
         <section class="partner">
-            <h3 class="pre-titolo">Abbiamo lavorato con</h3>
-            <div class="partner-loghi">
+            <h3 class="eyebrow">Abbiamo lavorato con</h3>
+            <div class="partner__logos">
                 <img src="./img/Group104.svg" alt="Logo partner 1" />
                 <img src="./img/Group103.svg" alt="Logo partner 2" />
                 <img src="./img/Vector.svg" alt="Logo partner 3" />
@@ -152,22 +157,17 @@
         </section>
 
         <!-- CTA Case Studies -->
-        <section class="cta-case-studies">
-            <div class="cta-contenuto">
+        <section class="cta-banner">
+            <div class="container cta-banner__content">
+                <label>diventa cio che progetti. </label>
                 <h2>Scopri come trasformiamo insight in risultati.</h2>
-                <button>Vedi i case studies</button>
-            </div>
-            <div class="cta-decorazioni">
-                <div
-                    class="placeholder-img placeholder-deco"
-                    aria-label="Decorazione"
-                ></div>
+                <button class="btn btn--primary">Contatti</button>
             </div>
         </section>
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="footer-top">
+            <div class="container footer-top">
                 <div class="footer-logo">
                     <img src="./img/Logobianco.svg" alt="Diventa logo" />
                     <p>
@@ -175,30 +175,44 @@
                     </p>
                 </div>
                 <nav class="footer-nav">
-                    <div class="footer-col">
-                        <p class="pre-titolo">Menu</p>
-                        <a href="index.html" class="link">Home</a>
-                        <a href="#" class="link">Aree di competenza</a>
-                        <a href="#" class="link">Soluzioni</a>
-                        <a href="#" class="link">Case studies</a>
-                        <a href="#" class="link">Contatti</a>
-                    </div>
-                    <div class="footer-col">
-                        <p class="pre-titolo">Contatti</p>
-                        <span class="link">info@diventa.com</span>
-                        <span class="link">+39 06 1234567</span>
-                    </div>
-                    <div class="footer-col">
-                        <p class="pre-titolo">Social</p>
-                        <a href="#" class="link">LinkedIn</a>
-                        <a href="#" class="link">Instagram</a>
-                    </div>
+                    <a href="index.html" class="link">Home</a>
+                    <a href="#" class="link">Aree di competenza</a>
+                    <a href="#" class="link">Soluzioni</a>
+                    <a href="#" class="link">Case studies</a>
+                    <a href="#" class="link">Contatti</a>
                 </nav>
             </div>
             <div class="footer-bottom">
-                <span class="link"
-                    >&copy; 2026 Diventa. Tutti i diritti riservati.</span
-                >
+                <div class="footer-info__company">
+                    <label>DIVENTA S.R.L.</label>
+                    <div class="footer-info__vat">
+                        <p>Partita IVA:</p>
+                        <h4>IT06625411001</h4>
+                    </div>
+                    <div class="footer-info__tax-code">
+                        <p>Codice Fiscale:</p>
+                        <h4>06625411001</h4>
+                    </div>
+                    <div class="footer-info__recipient-code">
+                        <p>Codice destinatario:</p>
+                        <h4>KRRH6B9</h4>
+                    </div>
+                </div>
+                <div class="footer-info__address">
+                    <label>INDIRIZZO</label>
+                    <h4>Piazza Capranica , 95 00186 Roma (RM) Italia</h4>
+                </div>
+                <div class="footer-info__contact">
+                    <label>CONTACT</label>
+                    <div class="footer-info__pec">
+                        <p>Pec:</p>
+                        <h4>diventa@pec.it</h4>
+                    </div>
+                    <div class="footer-info__email">
+                        <p>Mail:</p>
+                        <h4>info@diventa.it</h4>
+                    </div>
+                </div>
             </div>
         </footer>
     </body>
